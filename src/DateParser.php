@@ -1,5 +1,5 @@
 <?php
-namespace Xrt\DateParser;
+namespace Xrt\Dateparser;
 
 /**
  * "Universal" date parser, works with locale set... take a look at run() method
