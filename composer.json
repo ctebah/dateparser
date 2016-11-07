@@ -1,0 +1,11 @@
+{
+	"autoload" : {
+		"psr-4" : {
+			"Xrt\\Dateparser\\" : "src"
+		}
+	},
+	"name" : "xrt/dateparser",
+	"require" : {
+		"php" : ">=5.6"
+	}
+}
