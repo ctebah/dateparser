@@ -192,6 +192,8 @@ class DateParser {
 		'%O' => array("(th|nd|rd)", 'tm_ordinal', 1)
 	);
 	
+	protected $strategiesEnabled = [];
+	
 	public function __construct($alt_month_names = null, $alt_month_names_no_of_brackets = 0) {
 		$this->space_regex_pattern = "(\s|&nbsp;|&#160;|&#x00A0;|" . chr(194) . chr(160) . "|" .  chr(160) . ")*";
 		if ($alt_month_names) $this->set_month_alternate_names($alt_month_names, $alt_month_names_no_of_brackets);
