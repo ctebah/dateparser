@@ -481,7 +481,7 @@ class DateParser {
 					self::$current_locale_date_words = include $ffn_locale_static;
 				}
 				if (!self::$current_locale_date_words) {
-					self::$current_locale_date_words = include __DIR__ . '/DateParser_locale/en.php';
+					self::$current_locale_date_words = include __DIR__ . '/locale/en.php';
 				}
 			}
 		}
