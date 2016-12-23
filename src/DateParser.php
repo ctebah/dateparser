@@ -53,27 +53,27 @@ class DateParser {
 		'%x',							// Preferred date representation based on locale, without the time, top priority!	 
 		'%A, %m %d%3 %Y%5 %4 %H:%M', 	// Thursday, May 7, 2009 on 20:00
 	    '%A, %m %d%3 %Y%5', 	        // Thursday, May 7, 2009
-	    '%Y-%m-%d',                 // 2009-05-07
-	    '%Y-%m-%d %H:%M',           // 2009-05-07 20:00
-		'%m %d%3 %Y%5 %4 %H:%M', 	// May 7, 2009 on 20:00
-	    '%m %d%3 %Y%5', 	        // May 7, 2009
-	    '%d. %m%5 %Y%5 %4 %H:%M', 	// 7. may 2009. 20:00
-		'%d.%m.%Y. %H:%Mh', 		// 7. may 2009. 20:00h
-	    '%A, %m %d, %Y %4 %H:%M',	// Saturday, May 7, 2016
-	    '%A, %d. %m%5 %4 %H:%M',	// Saturday, 7. may on 19:00
+	    '%Y-%m-%d',                     // 2009-05-07
+	    '%Y-%m-%d %H:%M',               // 2009-05-07 20:00
+		'%m %d%3 %Y%5 %4 %H:%M', 	    // May 7, 2009 on 20:00
+	    '%m %d%3 %Y%5', 	            // May 7, 2009
+	    '%d. %m%5 %Y%5 %4 %H:%M', 	    // 7. may 2009. 20:00
+		'%d.%m.%Y. %H:%Mh', 		    // 7. may 2009. 20:00h
+	    '%A, %m %d, %Y %4 %H:%M',	    // Saturday, May 7, 2016
+	    '%A, %d. %m%5 %4 %H:%M',	    // Saturday, 7. may on 19:00
 	    '%A, %d. %m%5 %Y', 			// Saturday, 7. may 2009.
 		'%A, %d. %4 %H:%M',			// 7. on 19:00 
 		'%d%5 %m%5 %Y',	 			// 7. may 2009
 		'%d%5 %m%5 %4 %H:%M',		// 7. may on 19:00 
 		'%d%5 %m%5 %4 %Hh',			// 7. may on 19h 
-		'%d%5 %4 %H:%M',				// 7. on 19:00 
+	    '%d%5 %4 %H:%M',			// 7. on 19:00 
 		'%d%5 %H:%M',				// 7. 19:00 
-		'%d%5 %m%5 %Hh',				// 7. may 19h 
+	    '%d%5 %m%5 %Hh',			// 7. may 19h 
 		'%d%5 %4 %Hh',				// 7. on 19h
 		'%d%5 %Hh',					// 7. 19h
 		'%A, %d. %m',				// Saturday, 7. may
-		'%d%5 %m%5',					// 7. may
-		'%A, %d%5', 					// Saturday, 7.
+	    '%d%5 %m%5',				// 7. may
+	    '%A, %d%5', 				// Saturday, 7.
 		'%m-%d-%Y',					// 05-21-2009	 
 		'%m/%d/%Y',					// 05/21/2009
 		'%d.%m.%Y. %Hh',			// 01.12.2009. 19h
@@ -189,7 +189,7 @@ class DateParser {
 		"%p" => array("(am|pm)", 'tm_am_or_pm', 1),				// Ante meridiem and Post meridiem
 		"%P" => array("(AM|PM)", 'tm_am_or_pm', 1),				// Ante meridiem and Post meridiem
 		
-		'%O' => array("(th|nd|rd)", 'tm_ordinal', 1)
+		'%O' => array("(st|th|nd|rd)", 'tm_ordinal', 1)
 	);
 	
 	protected $strategiesEnabled = [];
