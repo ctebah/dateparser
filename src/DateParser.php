@@ -98,7 +98,7 @@ class DateParser {
 			'%3'	=> '[,.]?',
 			' %4 '	=> '\s*.{0,2}\s*',
 			'%4'	=> '.{0,2}',
-			'%5'	=> '[\.,/-]?',
+			'%5'	=> '[\.,/-]*',
 		)
 	);
 	
@@ -476,7 +476,7 @@ class DateParser {
 					self::$current_locale_date_words['months'][] = nl_langinfo(constant("MON_$i"));
 				}
 			} else {
-				$ffn_locale_static = __DIR__ . '/locale/' . strtolower($this->locale_failed_string) . '.php';
+				$ffn_locale_static = __DIR__ . '/locale/' . strtolower($current_locale) . '.php';
 				if (file_exists($ffn_locale_static)) {
 					self::$current_locale_date_words = include $ffn_locale_static;
 				}
